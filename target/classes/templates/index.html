@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Index</title>
+</head>
+<body>
+	<div th:replace="fragments/fragment :: header"></div>
+	<h2>Sistem Informasi Kemahasiswaan</h2>
+	<h5>Selamat Datang di Sistem Informasi Kemahasiswaan</h5>
+	<hr/>
+        <h4>Lihat Data Mahasiswa Berdasarkan NPM</h4>
+        <p>Masukan Nomor Pokok Mahasiswa</p>
+        <form action="/mahasiswa" method="get">
+            <div class="input-group mb-3 col-md-2">
+                <input type="text" name="npm" class="form-control form-control-sm" placeholder="NPM" aria-label="NPM" aria-describedby="basic-addon2"/>
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-info">Cari</button>
+                </div>
+            </div>
+        </form>
+	<div th:replace="fragments/fragment :: footer"></div>
+</body>
+</html>
+
